@@ -16,7 +16,7 @@ describe("notesView", () => {
     // with a "fresh" mocked class
     NotesClient.mockClear();
   });
-  xit("adds a new note", () => {
+  it("adds a new note", () => {
     document.body.innerHTML = fs.readFileSync("./index.html");
     const mockClient = new NotesClient();
     mockClient.loadNotes.mockImplementation(() => "This is my callback");
@@ -38,7 +38,7 @@ describe("notesView", () => {
       "My new amazing test note"
     );
   });
-  xit("adds 2 notes, only displays each one once", () => {
+  it("adds 2 notes, only displays each one once", () => {
     document.body.innerHTML = fs.readFileSync("./index.html");
     const mockClient = new NotesClient();
     mockClient.loadNotes.mockImplementation(() => "This is my callback");
