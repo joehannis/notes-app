@@ -1,18 +1,19 @@
 class Model {
   constructor() {
     this.notes = [];
+    // this.setNotes = this.setNotes.bind(this);
   }
 
   getNotes() {
     return this.notes;
   }
 
-  addNote() {
-    const message = document.querySelector("#message-input").value;
-    const messageElement = document.createElement("div");
-    messageElement.id = "message";
-    messageElement.innerText = message;
-    document.querySelector("#main-container").append(messageElement);
+  setNotes(data) {
+    this.notes.push(data);
+  }
+
+  addNote(note) {
+    this.notes.push(note);
   }
 
   reset() {
