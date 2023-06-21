@@ -9,7 +9,7 @@ class Model {
   }
 
   setNotes(data) {
-    this.notes.push(data);
+    this.notes = data;
   }
 
   addNote(note) {
